@@ -7,6 +7,7 @@
   packages = [
     pkgs.nodejs_20
     pkgs.python311Packages.pip
+    pkgs.docker-compose
     # pkgs.python311
     # pkgs.go
     # pkgs.nodePackages.nodemon

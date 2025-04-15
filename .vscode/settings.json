@@ -24,7 +24,5 @@
   "editor.fontSize": 14,
   "editor.fontLigatures": true,
   //code
-  "python.defaultInterpreterPath": "/usr/local/bin/python",
+  "python.defaultInterpreterPath": "/usr/local/bin/python"
 }
-
-

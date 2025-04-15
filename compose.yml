@@ -1,7 +1,7 @@
-service:
-  formatter-watch:
+services:
+  formatter:
     build:
-      context: ./dev/formatter-watch/
+      context: ${PWD}/devtool/formatter/
       dockerfile: Dockerfile
     volumes:
       - ${PWD}/:/app/main/
