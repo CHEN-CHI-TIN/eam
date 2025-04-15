@@ -60,7 +60,7 @@
       onStart = {
         # Example: start a background task to watch and re-build backend code
         # watch-backend = "npm run watch-backend";
-        formatter = "docker build -t tmy-img:lts ./.tmy/formatter-watch && docker run --rm -d --name tmy-img-ocr tmy-img:lts";
+        entrypoint = "docker compose up";
       };
     };
   };

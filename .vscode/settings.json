@@ -1,28 +1,28 @@
 {
-  "IDX.aI.enableInlineCompletion": true,
-  "IDX.aI.enableCodebaseIndexing": true,
-  // ui
-  "workbench.colorTheme": "Tokyo Night Storm",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.startupEditor": "readme",
-  "explorer.confirmDelete": false,
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
-  "editor.detectIndentation": false,
-  "editor.wordWrap": "on",
-  "files.exclude": {
-    "**/.DS_Store": false,
-    "**/.git": false,
-    "**/.hg": false,
-    "**/.svn": false,
-    "**/CVS": false,
-    "**/Thumbs.db": false
-  },
-  // font
-  "editor.fontFamily": "FiraCode Nerd Font Mono",
-  "editor.fontWeight": "350",
-  "editor.fontSize": 14,
-  "editor.fontLigatures": true,
-  //code
-  "python.defaultInterpreterPath": "/usr/local/bin/python"
+    "IDX.aI.enableInlineCompletion": true,
+    "IDX.aI.enableCodebaseIndexing": true,
+    // ui
+    "workbench.colorTheme": "Tokyo Night Storm",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "readme",
+    "explorer.confirmDelete": false,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.wordWrap": "on",
+    "files.exclude": {
+        "**/.DS_Store": false,
+        "**/.git": true,
+        "**/.hg": false,
+        "**/.svn": false,
+        "**/CVS": false,
+        "**/Thumbs.db": false
+    },
+    // font
+    "editor.fontFamily": "FiraCode Nerd Font Mono",
+    "editor.fontWeight": "350",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+    //code
+    "python.defaultInterpreterPath": "/usr/local/bin/python"
 }
