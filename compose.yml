@@ -1,0 +1,10 @@
+service:
+  formatter-watch:
+    build:
+      context: ./dev/formatter-watch/
+      dockerfile: Dockerfile
+    volumes:
+      - ${PWD}/:/app/main/
+    environment:
+      - NODE_OPTIONS=--max-old-space-size=8192
+      

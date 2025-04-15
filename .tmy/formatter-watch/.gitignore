@@ -1,0 +1,12 @@
+node_modules/
+pnpm-lock.yaml
+.pnpm-store/
+storage/database/main-pg/
+
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+.DS_Store
+*.local
+*.log*
