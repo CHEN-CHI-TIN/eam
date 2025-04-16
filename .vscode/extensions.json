@@ -10,7 +10,10 @@
     "github.copilot-chat",
     "storybook.storybook-vscode",
     "vscode-icons-team.vscode-icons",
-    "christian-kohler.path-intellisense"
+    "christian-kohler.path-intellisense",
+    "bradlc.vscode-tailwindcss",
+    "heybourn.headwind",
+    "csstools.postcss"
   ],
   "unwantedRecommendations": []
 } 
