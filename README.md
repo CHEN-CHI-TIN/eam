@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #### 小筆記
 
 https://supabase.com/docs/guides/self-hosting/docker
@@ -29,3 +30,6 @@ ENV=dev && docker compose up --build -d
 ### Step 1
 
 ![alt text](image.png)
+=======
+# eam
+>>>>>>> 566dbab866c72dbc44905ff1dc991d02ece51b6f
