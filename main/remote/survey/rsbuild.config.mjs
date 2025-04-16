@@ -6,7 +6,7 @@ export default defineConfig({
 	plugins: [
 		pluginReact(),
 		pluginModuleFederation({
-			name: "mf_remote_01",
+			name: "remote-01",
 			exposes: {
 				"./button": "./src/components/button.jsx",
 			},
@@ -14,18 +14,20 @@ export default defineConfig({
 		}),
 	],
 	dev: {
-		assetPrefix: "http://localhost:3001",
+		assetPrefix: "http://remote-01:3001",
+    publicPath: 'auto',
 	},
 	output: {
 		distPath: {
 			root: "./dist",
 		},
-		assetPrefix: "http://localhost:3001",
+		assetPrefix: "http://remote-01:3001",
+    publicPath: 'auto',
 	},
 	server: {
 		port: 3001,
-		open: false,
-		host: "0.0.0.0",
+    host: "0.0.0.0",
+    // https: true,
 	},
 	shared: {
 		react: {

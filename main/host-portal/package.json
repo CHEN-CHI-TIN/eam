@@ -1,5 +1,5 @@
 {
-  "name": "host",
+  "name": "mf-host-portal",
   "version": "1.0.0",
   "private": true,
   "type": "module",
@@ -19,5 +19,3 @@
     "@rsbuild/plugin-react": "^1.1.1"
   }
 }
-
-

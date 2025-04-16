@@ -20,10 +20,11 @@ COPY ./ /app/
 RUN npm install -g pnpm
 
 EXPOSE 3001
-EXPOSE 6006
+
+VOLUME [ "/app/node_modules/" ]
 
 CMD if [ "$ENV" = "prod" ]; then \
       pnpm run build && pnpm run start; \
     else \
-      pnpm run storybook & pnpm run dev; \
+      pnpm run storybook; \
     fi

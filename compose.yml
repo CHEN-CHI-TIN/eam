@@ -1,46 +1,50 @@
+name: ${PROJECT_NAME}
 services:
-    formatter:
-        build:
-            context: ${PWD}/devtool/formatter/
-            dockerfile: Dockerfile
-        volumes:
-            - ${PWD}/:/app/main/
-        environment:
-            - NODE_OPTIONS=--max-old-space-size=8192
-        restart: always
-    remote-01-${REMOTE_01_NAME}:
+    # formatter:
+    #     build:
+    #         context: ${PWD}/devtool/formatter/
+    #         dockerfile: Dockerfile
+    #     volumes:
+    #         - ${PWD}/:/app/main/
+    #     environment:
+    #         - NODE_OPTIONS=--max-old-space-size=8192
+    #     restart: always
+    remote-01:
         build:
             context: ${PWD}/main/remote/${REMOTE_01_NAME}
             dockerfile: Dockerfile
             args:
                 IMG_VER_BUILD_NODE: ${IMG_VER_BUILD_NODE}
                 IMG_VER_RUNTIME_NODE: ${IMG_VER_RUNTIME_NODE}
+        ports:
+            - 3001:3001
+        networks:
+            - remote
         volumes:
-            - ${PWD}/main/${REMOTE_01_NAME}/:/app/
+            - ${PWD}/main/remote/${REMOTE_01_NAME}/:/app/
         environment:
             - ENV = dev
-        depands_on:
-            - database
-            - formatter
         restart: always
-    database-01-${DATABASE_01_NAME}:
-        build:
-            context: ${PWD}/main/database/${DATABASE_01_NAME}
-            dockerfile: Dockerfile
-        networks:
-            - host-network
-        ports:
-            - ${PORT_DATABASE_01}:3000
-        volumes:
-            - ${PWD}/:/app/main/
-        environment:
-            - NODE_OPTIONS=--max-old-space-size=8192
-        restart: always
+        # command: tail -f /dev/null
 
-volumes:
-    database-${DATABASE_01_NAME}:
+    # database-01-${DATABASE_01_NAME}:
+    #     build:
+    #         context: ${PWD}/main/database/${DATABASE_01_NAME}
+    #         dockerfile: Dockerfile
+    #     networks:
+    #         - host-network
+    #     ports:
+    #         - ${PORT_DATABASE_01}:3000
+    #     volumes:
+    #         - ${PWD}/:/app/main/
+    #     environment:
+    #         - NODE_OPTIONS=--max-old-space-size=8192
+    #     restart: always
+
+# volumes:
+#     database-${DATABASE_01_NAME}:
 
 #! 主機一(入口)
 networks:
-    ${PROJECT_NAME}-remote:
+    remote:
         driver: bridge
