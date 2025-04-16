@@ -1,5 +1,6 @@
 ARG IMG_VER_BUILD_NODE
 ARG IMG_VER_RUNTIME_NODE
+ARG REMOTE_01_PORT
 FROM ${IMG_VER_BUILD_NODE} AS build
 
 WORKDIR /app/
@@ -19,7 +20,7 @@ COPY ./ /app/
 
 RUN npm install -g pnpm
 
-EXPOSE 3001
+EXPOSE ${REMOTE_01_PORT}
 
 VOLUME [ "/app/node_modules/" ]
 

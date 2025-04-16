@@ -17,13 +17,13 @@ services:
                 IMG_VER_BUILD_NODE: ${IMG_VER_BUILD_NODE}
                 IMG_VER_RUNTIME_NODE: ${IMG_VER_RUNTIME_NODE}
         ports:
-            - 3001:3001
+            - ${REMOTE_01_PORT}:${REMOTE_01_PORT}
         networks:
             - remote
         volumes:
             - ${PWD}/main/remote/${REMOTE_01_NAME}/:/app/
         environment:
-            - ENV = dev
+            - ENV=${ENV}
         restart: always
         # command: tail -f /dev/null
 

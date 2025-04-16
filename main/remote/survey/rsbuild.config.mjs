@@ -9,6 +9,7 @@ export default defineConfig({
 			name: "remote-01",
 			exposes: {
 				"./button": "./src/components/button.jsx",
+				"./previewSurvey": "./src/components/previewSurvey.jsx",
 			},
 			shared: ["react", "react-dom"],
 		}),

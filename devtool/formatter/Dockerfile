@@ -16,7 +16,6 @@ RUN apt-get update && \
     curl -sL https://webinstall.dev/shfmt | bash && \
     mkdir -p /app/config/ && \
     chmod 777 /app/config/ && \
-    # 驗證 shfmt 已正確安裝
     which shfmt || echo "shfmt not found"
 
 COPY ./config/ /app/config/
