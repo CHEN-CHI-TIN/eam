@@ -9,6 +9,33 @@ services:
     #     environment:
     #         - NODE_OPTIONS=--max-old-space-size=8192
     #     restart: always
+    
+    host-portal:
+        build:
+            context: ${PWD}/main/host-portal/
+            dockerfile: Dockerfile
+            args:
+                IMG_VER_BUILD_NODE: ${IMG_VER_BUILD_NODE}
+                IMG_VER_RUNTIME_NODE: ${IMG_VER_BUILD_NODE}
+        ports:
+            - ${HOST_PORT}:${HOST_PORT}
+        networks:
+            - remote
+        volumes:
+            - ${PWD}/main/host-portal/:/app/
+        environment:
+            - ENV=${ENV}
+        restart: always
+        command: >
+            bash -c "
+                if [ "$ENV" = "prod" ]; then \
+                    pnpm run build && pnpm run start; \
+                else \
+                    pnpm run dev; \
+                fi
+            "
+        
+
     remote-01:
         build:
             context: ${PWD}/main/remote/${REMOTE_01_NAME}
