@@ -9,11 +9,6 @@
     pkgs.python311
     pkgs.python311Packages.pip
     pkgs.docker-compose
-<<<<<<< HEAD
-=======
-    pkgs.pnpm
-    # pkgs.python311
->>>>>>> e3a04331d9bd63486cc54ef04cd589c3354287be
     # pkgs.go
     # pkgs.nodePackages.nodemon
   ];
@@ -58,7 +53,7 @@
       onStart = {
         # Example: start a background task to watch and re-build backend code
         # watch-backend = "npm run watch-backend";
-        # entrypoint = "docker compose up --build -d";
+        entrypoint = "docker compose up --build -d";
       };
     };
   };
