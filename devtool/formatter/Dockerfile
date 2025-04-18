@@ -4,7 +4,7 @@ FROM docker.io/library/node:20
 WORKDIR /app/main/
 
 ENV PATH=$HOME/.local/bin:$PATH
-
+   
 RUN apt-get update && \
     apt-get install -y \
         curl \

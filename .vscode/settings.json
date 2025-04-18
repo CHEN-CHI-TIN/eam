@@ -2,7 +2,7 @@
     "IDX.aI.enableInlineCompletion": true,
     "IDX.aI.enableCodebaseIndexing": true,
     // ui
-    "workbench.colorTheme": "Tokyo Night Storm",
+    "workbench.colorTheme": "Google Light",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "readme",
     "explorer.confirmDelete": false,
@@ -16,14 +16,19 @@
         "**/.hg": false,
         "**/.svn": false,
         "**/CVS": false,
-        "**/Thumbs.db": false
+        "**/Thumbs.db": false,
+        "**/tsconfig*": false,
     },
     // font
     "editor.fontFamily": "FiraCode Nerd Font Mono",
-    "editor.fontWeight": "350",
-    "editor.fontSize": 14,
+    "editor.fontWeight": "340",
+    "editor.fontSize": 12,
     "editor.fontLigatures": true,
     //code
     "python.defaultInterpreterPath": "/usr/local/bin/python",
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "workbench.editor.defaultBinaryEditor": "workbench.editorinputs.searchEditorInput",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.decorations.colors": true,
+    "window.density.editorTabHeight": "default"
 }

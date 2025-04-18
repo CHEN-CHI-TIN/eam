@@ -1,7 +1,6 @@
 #!/bin/bash
 
 PATH_SERVICE=$(pwd)/main/service/
-
 docker container prune -f
 docker image prune -a -f
 docker volume prune -f
