@@ -9,6 +9,11 @@
     pkgs.python311
     pkgs.python311Packages.pip
     pkgs.docker-compose
+<<<<<<< HEAD
+=======
+    pkgs.pnpm
+    # pkgs.python311
+>>>>>>> e3a04331d9bd63486cc54ef04cd589c3354287be
     # pkgs.go
     # pkgs.nodePackages.nodemon
   ];
